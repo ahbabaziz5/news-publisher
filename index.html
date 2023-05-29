@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News Publisher</title>
+    <style>
+        .container{
+            border: 1px solid ;
+            width: 30%;
+            height: 150px;
+            text-align: center;
+            padding-top: 10px;
+            background-color: white;
+            margin-left: 350px;
+            border-style: none;
+        }
+        ul{
+            list-style: none;
+
+        }
+        #box{
+            border: 1px solid black;
+            /* width: 90%;
+            height: 200px; */
+            text-align: center;
+            border-style: none;
+        }
+        input{
+            margin-top: 10px;
+            border-radius: 5px;
+        }
+        button{
+            margin-top: 10px;
+            border-radius: 5px;
+        }
+        
+       
+    </style>
+</head>
+<body>
+    <div class="container">    <input type="text" id="heading" placeholder="news title"><br>
+    <input type="text" id="txt" placeholder="news Content"><br>
+    <input type="text" id="img" placeholder="image" ><br>
+    <button onclick="show()">show</button></div>
+    <ul id="box"></ul>
+
+
+
+
+
+    <script>
+        function show(){
+        let heading = document.getElementById('heading').value
+        let txt = document.getElementById('txt').value;
+        let img = document.getElementById('img').value;
+        
+        let box = document.getElementById('box').innerHTML += `<li>
+            <h1>${heading}</h1>
+            <p>${txt}</p>
+            <img src="${img}"></img></li>`
+    
+    
+    
+    
+    
+    
+    }
+    </script>
+</body>
+</html>
